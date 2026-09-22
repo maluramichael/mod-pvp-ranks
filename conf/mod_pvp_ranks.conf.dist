@@ -1,0 +1,69 @@
+[worldserver]
+
+########################################
+# mod-pvp-ranks configuration
+########################################
+#
+# A seasonal, 14-rank PvP progression system layered on top of honorable
+# player kills (WoW-Forever style). Every PvP kill awards a fixed number of
+# points to the killer, capped per week, and cumulative points map onto the
+# classic 14 PvP ranks (Private/Scout ... Grand Marshal/High Warlord), named
+# by the killer's faction.
+#
+# Check current standing with the in-game command `.pvprank` (add `top` for a
+# leaderboard). See the module README for the full rank/threshold table.
+#
+
+#
+#    PvpRanks.Enable
+#        Master on/off switch for this module. 0 = the module loads but does
+#        nothing (no points awarded, commands report it as disabled).
+#        Default: 1
+#
+PvpRanks.Enable = 1
+
+#
+#    PvpRanks.PointsPerKill
+#        Points awarded to the killer on each honorable PvP kill (subject to
+#        the weekly cap below).
+#        Default: 10
+#
+PvpRanks.PointsPerKill = 10
+
+#
+#    PvpRanks.WeeklyCap
+#        Maximum points a single character can earn per week. Resets
+#        automatically when the week rolls over. Clamped up to at least
+#        PvpRanks.PointsPerKill if set lower.
+#        Default: 2000
+#
+PvpRanks.WeeklyCap = 2000
+
+#
+#    PvpRanks.Season
+#        Current season number. Bump this to start a new season: any
+#        character whose stored season no longer matches is archived and
+#        reset to rank 1 / 0 points the next time it logs in. Use the GM
+#        command `.pvprank resetseason` to force this immediately for every
+#        stored character instead of waiting for logins.
+#        Default: 1
+#
+PvpRanks.Season = 1
+
+#
+#    PvpRanks.CountBots
+#        1 = a playerbot's PvP kills award rank points like a real player's.
+#        0 = a playerbot-controlled killer never earns rank points (covers
+#        bot-vs-bot and bot-vs-player kills alike; a real player killing a
+#        bot is unaffected either way).
+#        Default: 1
+#
+PvpRanks.CountBots = 1
+
+#
+#    PvpRanks.AnnounceRankUp
+#        1 = broadcast a server-wide message when a character is promoted to
+#        a new rank. 0 = silent (still visible via `.pvprank`).
+#        Default: 1
+#
+PvpRanks.AnnounceRankUp = 1
