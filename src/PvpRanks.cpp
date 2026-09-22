@@ -210,7 +210,7 @@ namespace PvpRanks
 
     void EnsureSchema()
     {
-        CharacterDatabase.Execute(
+        CharacterDatabase.DirectExecute(
             "CREATE TABLE IF NOT EXISTS `pvp_rank_points` ("
             "`guid` INT UNSIGNED NOT NULL, "
             "`points` INT UNSIGNED NOT NULL DEFAULT 0, "
@@ -221,7 +221,7 @@ namespace PvpRanks
             "PRIMARY KEY (`guid`)"
             ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;");
 
-        CharacterDatabase.Execute(
+        CharacterDatabase.DirectExecute(
             "CREATE TABLE IF NOT EXISTS `pvp_rank_points_archive` ("
             "`id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT, "
             "`guid` INT UNSIGNED NOT NULL, "
