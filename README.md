@@ -1,5 +1,10 @@
 # mod-pvp-ranks
 
+<!-- links:start -->
+[![Support me on Ko-fi](https://malura.de/assets/badge/kofi.svg)](https://malura.de/go/kofi?ref=mod-pvp-ranks)
+[![Check out my page](https://malura.de/assets/badge/malura.svg)](https://malura.de/go/site?ref=mod-pvp-ranks)
+<!-- links:end -->
+
 An [AzerothCore](https://www.azerothcore.org/) module (WotLK 3.3.5a) that adds a seasonal,
 14-rank PvP progression system on top of honorable player kills, in the spirit of classic
 WoW's old PvP rank ladder.
